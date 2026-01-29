@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   body {
     @apply bg-krea-black text-white font-sans overflow-x-hidden;
@@ -25,12 +29,15 @@
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   @apply bg-krea-black;
 }
+
 ::-webkit-scrollbar-thumb {
   @apply bg-neutral-800 rounded-full;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-krea-purple;
 }

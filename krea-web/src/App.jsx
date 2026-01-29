@@ -202,8 +202,12 @@ const Navbar = () => (
     <nav className="fixed top-0 left-0 w-full z-[60] px-8 pt-12 pb-6 flex justify-between items-center mix-blend-difference text-white">
         <span className="font-impact text-3xl tracking-tighter">KREA®</span>
         <div className="flex gap-8 font-bold text-sm uppercase tracking-widest hidden md:flex">
-            {['Estudio', 'Portafolio', 'Manifiesto'].map((item) => (
-                <a key={item} href="#" className="hover:text-krea-green transition-colors">{item}</a>
+            {[
+                { name: 'Estudio', href: '#estudio' },
+                { name: 'Portafolio', href: '#portafolio' },
+                { name: 'Manifiesto', href: '#manifiesto' }
+            ].map((item) => (
+                <a key={item.name} href={item.href} className="hover:text-krea-green transition-colors">{item.name}</a>
             ))}
         </div>
         <button className="bg-white text-black px-6 py-2 font-bold uppercase text-xs hover:bg-krea-green hover:scale-105 transition-all mt-4">
@@ -251,7 +255,7 @@ const Hero = () => {
                     >
                         KREA
                     </motion.h1>
-                    <div className="absolute -bottom-8 right-0 text-krea-purple font-mono text-[0.6rem] tracking-widest rotate-6 bg-black p-1 border border-krea-purple">
+                    <div className="absolute -bottom-8 right-0 text-krea-purple font-mono text-[0.6rem] tracking-widest rotate-6 bg-black p-1">
                         [EST. MMXXIV]
                     </div>
                 </motion.div>
@@ -294,7 +298,7 @@ const Marquee = () => {
 };
 
 const Philosophy = () => (
-    <section className="py-32 relative overflow-hidden">
+    <section id="manifiesto" className="py-32 relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-16 items-center">
             <div>
                 <div className="inline-block bg-krea-green text-black px-2 font-mono font-bold mb-4 skew-x-12">MANIFIESTO.md</div>
@@ -334,7 +338,7 @@ const Gallery = () => {
     ];
 
     return (
-        <section className="py-20 px-4">
+        <section id="portafolio" className="py-20 px-4">
             <div className="max-w-7xl mx-auto">
                 <div className="flex justify-between items-end mb-16 border-b-4 border-white/20 pb-8">
                     <h2 className="text-7xl md:text-9xl font-impact text-white tracking-img">OBRA</h2>
@@ -394,7 +398,7 @@ const TechSpecs = () => {
     ];
 
     return (
-        <section className="py-24 border-y border-neutral-800 bg-neutral-900/50 backdrop-blur">
+        <section id="estudio" className="py-24 border-y border-neutral-800 bg-neutral-900/50 backdrop-blur">
             <div className="w-full overflow-hidden">
                 <div className="flex gap-4 items-center justify-center mb-12">
                     <Aperture className="text-white w-8 h-8 animate-spin-slow" />
