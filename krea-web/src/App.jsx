@@ -273,7 +273,7 @@ const Hero = () => {
 
 const Marquee = () => {
     return (
-        <div className="bg-krea-purple text-white py-6 overflow-hidden whitespace-nowrap border-y-[6px] border-black z-20 relative transform -skew-y-3 origin-center scale-110 my-20">
+        <div className="bg-krea-purple text-white py-6 overflow-hidden whitespace-nowrap border-y-[6px] border-black z-20 relative transform -skew-y-3 origin-center scale-100 md:scale-110 mt-32 md:my-20">
             <motion.div
                 className="flex gap-20 text-6xl font-black italic uppercase tracking-tighter"
                 animate={{ x: [0, -1000] }}
