@@ -199,14 +199,14 @@ const CamoBackground = () => (
 );
 
 const Navbar = () => (
-    <nav className="fixed top-0 left-0 w-full z-50 px-8 py-6 flex justify-between items-center mix-blend-difference text-white">
+    <nav className="fixed top-0 left-0 w-full z-[60] px-8 pt-12 pb-6 flex justify-between items-center mix-blend-difference text-white">
         <span className="font-impact text-3xl tracking-tighter">KREA®</span>
         <div className="flex gap-8 font-bold text-sm uppercase tracking-widest hidden md:flex">
             {['Estudio', 'Portafolio', 'Manifiesto'].map((item) => (
                 <a key={item} href="#" className="hover:text-krea-green transition-colors">{item}</a>
             ))}
         </div>
-        <button className="bg-white text-black px-6 py-2 font-bold uppercase text-xs hover:bg-krea-green hover:scale-105 transition-all">
+        <button className="bg-white text-black px-6 py-2 font-bold uppercase text-xs hover:bg-krea-green hover:scale-105 transition-all mt-4">
             Contacto
         </button>
     </nav>
@@ -239,19 +239,19 @@ const Hero = () => {
                         initial={{ scale: 0.9, y: 100, opacity: 0 }}
                         animate={{ scale: 1, y: 0, opacity: 1 }}
                         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                        className="text-[15vw] md:text-[20vw] leading-[0.85] font-impact tracking-tighter text-white uppercase mix-blend-screen select-none"
+                        className="text-[20vw] md:text-[25vw] leading-[0.85] font-impact tracking-tighter text-white uppercase mix-blend-screen select-none"
                     >
                         KREA
                     </motion.h1>
                     {/* Glitch Effect Duplicate */}
                     <motion.h1
-                        className="absolute top-0 left-0 text-[15vw] md:text-[20vw] leading-[0.85] font-impact tracking-tighter text-krea-green opacity-40 mix-blend-color-dodge select-none w-full"
+                        className="absolute top-0 left-0 text-[20vw] md:text-[25vw] leading-[0.85] font-impact tracking-tighter text-krea-green opacity-40 mix-blend-color-dodge select-none w-full"
                         animate={{ x: [-2, 2, -2], opacity: [0.2, 0.5, 0.2] }}
                         transition={{ duration: 0.2, repeat: Infinity, repeatDelay: 3 }}
                     >
                         KREA
                     </motion.h1>
-                    <div className="absolute -bottom-8 right-0 text-krea-purple font-mono text-sm tracking-widest rotate-6 bg-black p-1 border border-krea-purple">
+                    <div className="absolute -bottom-8 right-0 text-krea-purple font-mono text-[0.6rem] tracking-widest rotate-6 bg-black p-1 border border-krea-purple">
                         [EST. MMXXIV]
                     </div>
                 </motion.div>
@@ -330,7 +330,7 @@ const Gallery = () => {
         { title: "NIGHTRUN", category: "AUTO", img: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1000&auto=format&fit=crop" },
         { title: "NEON", category: "FASHION", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop" },
         { title: "BLOCK", category: "URBAN", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop" },
-        { title: "DRIFT", category: "DOC", img: "https://images.unsplash.com/photo-1600705722838-831e67aa24de?q=80&w=1000&auto=format&fit=crop" },
+        { title: "DRIFT", category: "DOC", img: "https://images.unsplash.com/photo-1621932953986-15fcf084da0f?q=80&w=1000&auto=format&fit=crop" },
     ];
 
     return (
